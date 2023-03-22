@@ -1,0 +1,76 @@
+﻿<Window x:Class="WPFControlesYNavegacion.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFControlesYNavegacion"
+        mc:Ignorable="d"
+        Title="Ventana 1 - Música" Height="450" Width="822" Background="#FF811D00" MinWidth="822" MaxWidth="822" MinHeight="450" MaxHeight="450" Icon="MusicaLogo.ico">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Height="42" Margin="218,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" FontFamily="Tahoma" FontSize="32" TextAlignment="Center" Foreground="White"><Run Text="VENTANA "/><Run Text="1"/><Run Text=" - MÚSICA"/></TextBlock>
+        <Button x:Name="BtnRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="701,381,0,0" VerticalAlignment="Top" Width="75" Click="BtnRegresar_Click"/>
+        <Menu HorizontalAlignment="Stretch" Height="23" VerticalAlignment="Top" Width="Auto" FontFamily="Tahoma" FontSize="14" Background="#FFF1FFD4">
+            <MenuItem Header="Archivo" Height="23">
+                <MenuItem Header="Firma" Click="MenuItem_Click"/>
+                <MenuItem Header="Regresar" Click="MenuItem_Click_2"/>
+                <MenuItem Header="Salir" Click="MenuItem_Click_1"/>
+            </MenuItem>
+        </Menu>
+        <Grid HorizontalAlignment="Left" Height="126" Margin="10,107,0,0" VerticalAlignment="Top" Width="260">
+            <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="55,100,0,0" Width="36" Click="btnPlay_Click" Height="20" VerticalAlignment="Top"/>
+            <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="182,100,0,0" VerticalAlignment="Top" Width="36" Click="btnStop_Click"/>
+            <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top" Width="41" Click="btnPause_Click"/>
+            <MediaElement x:Name="Audio" HorizontalAlignment="Left" Height="36" Margin="13,13,0,0" VerticalAlignment="Top" Width="39" Source="Cancion1.mp3" LoadedBehavior="Manual" Stretch="Fill"/>
+            <TextBlock x:Name="TxtStatus" HorizontalAlignment="Left" Margin="101,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextAlignment="Center" Foreground="White"><Run Text="00:00 / 0"/><Run Text="3"/><Run Text=":"/><Run Text="17"/></TextBlock>
+            <Slider x:Name="SldStatus" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SldStatus_ValueChanged"/>
+            <TextBlock x:Name="TxtIntro" HorizontalAlignment="Left" Margin="92,24,0,0" TextWrapping="Wrap" Text="Cancion 1" VerticalAlignment="Top" Width="85" TextAlignment="Center" FontFamily="Tahoma" FontSize="13" Foreground="White"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="126" Margin="275,107,0,0" VerticalAlignment="Top" Width="260">
+            <Button x:Name="btnPlay1" Content="Play" HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Width="36" Click="btnPlay1_Click"/>
+            <Button x:Name="btnStop1" Content="Stop" HorizontalAlignment="Left" Margin="182,100,0,0" VerticalAlignment="Top" Width="36" Click="btnStop1_Click"/>
+            <Button x:Name="btnPause1" Content="Pause" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top" Width="41" Click="btnPause1_Click"/>
+            <MediaElement x:Name="Audio1" HorizontalAlignment="Left" Height="36" Margin="13,13,0,0" VerticalAlignment="Top" Width="39" Source="Cancion2.mp3" LoadedBehavior="Manual" Stretch="Fill"/>
+            <TextBlock x:Name="TxtStatus1" HorizontalAlignment="Left" Margin="101,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextAlignment="Center" Foreground="White"><Run Text="00:00 / 0"/><Run Text="4"/><Run Text=":"/><Run Text="2"/><Run Text="0"/></TextBlock>
+            <Slider x:Name="SldStatus1" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SldStatus1_ValueChanged"/>
+            <TextBlock x:Name="TxtIntro1" HorizontalAlignment="Left" Margin="92,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextAlignment="Center" FontFamily="Tahoma" FontSize="13" Foreground="White"><Run Text="Cancion "/><Run Text="2"/></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="126" Margin="540,107,0,0" VerticalAlignment="Top" Width="260">
+            <Button x:Name="btnPlay2" Content="Play" HorizontalAlignment="Left" Margin="55,100,0,6" Width="36" Click="btnPlay2_Click"/>
+            <Button x:Name="btnStop2" Content="Stop" HorizontalAlignment="Left" Margin="182,100,0,0" VerticalAlignment="Top" Width="36" Click="btnStop2_Click"/>
+            <Button x:Name="btnPause2" Content="Pause" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top" Width="41" Click="btnPause2_Click"/>
+            <MediaElement x:Name="Audio2" HorizontalAlignment="Left" Height="36" Margin="13,13,0,0" VerticalAlignment="Top" Width="39" Source="Cancion3.mp3" LoadedBehavior="Manual" Stretch="Fill"/>
+            <TextBlock x:Name="TxtStatus2" HorizontalAlignment="Left" Margin="101,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextAlignment="Center" Foreground="White"><Run Text="00:00 / 0"/><Run Text="6"/><Run Text=":0"/><Run Text="3"/></TextBlock>
+            <Slider x:Name="SldStatus2" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SldStatus2_ValueChanged"/>
+            <TextBlock x:Name="TxtIntro2" HorizontalAlignment="Left" Margin="92,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextAlignment="Center" FontFamily="Tahoma" FontSize="13" Foreground="White"><Run Text="Cancion "/><Run Text="3"/></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="126" Margin="10,238,0,0" VerticalAlignment="Top" Width="260">
+            <Button x:Name="btnPlay3" Content="Play" HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Width="36" Click="btnPlay3_Click"/>
+            <Button x:Name="btnStop3" Content="Stop" HorizontalAlignment="Left" Margin="182,100,0,0" VerticalAlignment="Top" Width="36" Click="btnStop3_Click"/>
+            <Button x:Name="btnPause3" Content="Pause" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top" Width="41" Click="btnPause3_Click"/>
+            <MediaElement x:Name="Audio3" HorizontalAlignment="Left" Height="36" Margin="13,13,0,0" VerticalAlignment="Top" Width="39" Source="Cancion4.mp3" LoadedBehavior="Manual" Stretch="Fill"/>
+            <TextBlock x:Name="TxtStatus3" HorizontalAlignment="Left" Margin="101,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextAlignment="Center" Foreground="White"><Run Text="00:00 / 0"/><Run Text="7:35"/></TextBlock>
+            <Slider x:Name="SldStatus3" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SldStatus3_ValueChanged"/>
+            <TextBlock x:Name="TxtIntro3" HorizontalAlignment="Left" Margin="92,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextAlignment="Center" FontFamily="Tahoma" FontSize="13" Foreground="White"><Run Text="Cancion "/><Run Text="4"/></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="126" Margin="275,238,0,0" VerticalAlignment="Top" Width="260">
+            <Button x:Name="btnPlay4" Content="Play" HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Width="36" Click="btnPlay4_Click"/>
+            <Button x:Name="btnStop4" Content="Stop" HorizontalAlignment="Left" Margin="182,100,0,0" VerticalAlignment="Top" Width="36" Click="btnStop4_Click"/>
+            <Button x:Name="btnPause4" Content="Pause" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top" Width="41" Click="btnPause4_Click"/>
+            <MediaElement x:Name="Audio4" HorizontalAlignment="Left" Height="36" Margin="13,13,0,0" VerticalAlignment="Top" Width="39" Source="Cancion5.mp3" LoadedBehavior="Manual" Stretch="Fill"/>
+            <TextBlock x:Name="TxtStatus4" HorizontalAlignment="Left" Margin="101,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextAlignment="Center" Foreground="White"><Run Text="00:00 / 0"/><Run Text="4:09"/></TextBlock>
+            <Slider x:Name="SldStatus4" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SldStatus4_ValueChanged"/>
+            <TextBlock x:Name="TxtIntro4" HorizontalAlignment="Left" Margin="92,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextAlignment="Center" FontFamily="Tahoma" FontSize="13" Foreground="White"><Run Text="Cancion "/><Run Text="5"/></TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="126" Margin="540,238,0,0" VerticalAlignment="Top" Width="260">
+            <Button x:Name="btnPlay5" Content="Play" HorizontalAlignment="Left" Margin="55,100,0,0" Width="36" Click="btnPlay5_Click" Height="20" VerticalAlignment="Top"/>
+            <Button x:Name="btnStop5" Content="Stop" HorizontalAlignment="Left" Margin="182,100,0,0" VerticalAlignment="Top" Width="36" Click="btnStop5_Click"/>
+            <Button x:Name="btnPause5" Content="Pause" HorizontalAlignment="Left" Margin="114,100,0,0" VerticalAlignment="Top" Width="41" Click="btnPause5_Click"/>
+            <MediaElement x:Name="Audio5" HorizontalAlignment="Left" Height="36" Margin="13,13,0,0" VerticalAlignment="Top" Width="39" Source="Cancion6.mp3" LoadedBehavior="Manual" Stretch="Fill"/>
+            <TextBlock x:Name="TxtStatus5" HorizontalAlignment="Left" Margin="101,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" TextAlignment="Center" Foreground="White"><Run Text="00:00 / 0"/><Run Text="3:16"/></TextBlock>
+            <Slider x:Name="SldStatus5" HorizontalAlignment="Left" Margin="24,59,0,0" VerticalAlignment="Top" Width="222" ValueChanged="SldStatus5_ValueChanged"/>
+            <TextBlock x:Name="TxtIntro5" HorizontalAlignment="Left" Margin="92,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextAlignment="Center" FontFamily="Tahoma" FontSize="13" Foreground="White"><Run Text="Cancion "/><Run Text="6"/></TextBlock>
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="74" Margin="93,28,0,0" VerticalAlignment="Top" Width="73" Stretch="Fill" Source="MusicaLogo.png"/>
+        <Image HorizontalAlignment="Left" Height="74" Margin="651,28,0,0" VerticalAlignment="Top" Width="73" Stretch="Fill" Source="MusicaLogo.png"/>
+    </Grid>
+</Window>
